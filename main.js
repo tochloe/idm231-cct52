@@ -7,29 +7,29 @@
  */
 function getZodiac(month, day) {
     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-      return 'Capricorn';
+      return 'Capricorn/Linus Van Pelt';
     } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-      return 'Sagittarius';
+      return 'Sagittarius/Snoopy';
     } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
-      return 'Scorpio';
+      return 'Scorpio/Woodstock';
     } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
-      return 'Libra';
+      return 'Libra/Sally Brown';
     } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-      return 'Virgo';
+      return 'Virgo/Marcie';
     } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
-      return 'Leo';
+      return 'Leo/Peppermint Patty';
     } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
-      return 'Cancer';
+      return 'Cancer/Charlie Brown';
     } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
-      return 'Gemini';
+      return 'Gemini/Schroeder';
     } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-      return 'Taurus';
+      return 'Taurus/Frieda';
     } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-      return 'Aries';
+      return 'Aries/Lucy Van Pelt';
     } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
-      return 'Pisces';
+      return 'Pisces/Pigpen';
     } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
-      return 'Aquarius';
+      return 'Aquarius/Franklin';
     } else return null;
   }
 
@@ -92,7 +92,7 @@ const zodiac = [
     };
  
     {
-        name: 'Capricorn/Linue Van Pelt',
+        name: 'Capricorn/Linus Van Pelt',
         img:
         text:
     };
