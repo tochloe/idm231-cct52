@@ -1,0 +1,18 @@
+@font-face {
+    font-family: ("Groundnut");
+    src: url(./Groundnut-yxPm.ttf);
+}
+
+@font-face {
+    font-family: ("Averia Serif Libre");
+    src: url(./AveriaSerifLibre-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    --cream: #FFFDCE;
+    
+}
