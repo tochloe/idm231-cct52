@@ -1,11 +1,12 @@
 @font-face {
-    font-family: ("Groundnut");
+    font-family: "Groundnut";
     src: url(./Groundnut-yxPm.ttf);
 }
 
 @font-face {
-    font-family: ("Averia Serif Libre");
+    font-family: "Averia Serif Libre";
     src: url(./AveriaSerifLibre-Regular.ttf);
+    font-weight: 300 400;
 }
 
 *{
@@ -14,5 +15,27 @@
 
 html {
     --cream: #FFFDCE;
-    
+    --brown: #473120;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--brown);
+    margin: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    width: 50%;
+}
+
+
+h2 {
+    font-family: "Averia Serif Libre";
+    font-size: 36px;
+}
+
+h3 {
+    font-family: "Groundnut";
 }
