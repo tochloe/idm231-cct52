@@ -113,7 +113,7 @@ const zodiac = [
 
     {
         name: 'Aries/Lucy Van Pelt',
-        img: 
+        img: "./im"
         text: ''
     },
     
