@@ -24,10 +24,10 @@ body {
     margin: 20px;
 }
 
-.grid {
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-    width: 50%;
+.picgrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

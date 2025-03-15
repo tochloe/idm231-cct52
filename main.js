@@ -5,6 +5,80 @@
  * @param {number} day - day of the month (1-31)
  * @returns {string} the corresponding Zodiac sign
  */
+const franklinBtn = document.getElementById('franklin')
+const lucyBtn = document.getElementById('lucy')
+const charlieBtn = document.getElementById('charlie')
+const linusBtn = document.getElementById('linus')
+const schroederBtn = document.getElementById('schroeder')
+const peppermintBtn = document.getElementById('peppermint')
+const sallyBtn = document.getElementById('sally')
+const pigpenBtn = document.getElementById('pigpen')
+const snoopyBtn = document.getElementById('snoopy')
+const woodstockBtn = document.getElementById('woodstock')
+const friedaBtn = document.getElementById('frieda')
+const marcieBtn = document.getElementById('marcie')
+
+//sounds
+const soundboard = document.getElementById('soundboard');
+function play_audio(src) {
+  let audio_element = new Audio();
+  if (!audio_element.paused) {
+    audio_element.paused();
+    audio_element.currentTime = 0;
+  }
+  audio_element.src = src;
+  audio_element.play();
+}
+
+document.getElementById('franklin').addEventListener('click', function() {
+    play_audio('sounds/aquarius.mp3');
+});
+
+document.getElementById('lucy').addEventListener('click', function() {
+    play_audio('sounds/aries.mp3');
+});
+
+document.getElementById('charlie').addEventListener('click', function() {
+  play_audio('sounds/cancer.mp3');
+});
+
+document.getElementById('linus').addEventListener('click', function() {
+  play_audio('sounds/capricorn.mp3');
+});
+
+document.getElementById('schroeder').addEventListener('click', function() {
+  play_audio('sounds/gemini.mp3');
+});
+
+document.getElementById('peppermint').addEventListener('click', function() {
+  play_audio('sounds/leo.mp3');
+});
+
+document.getElementById('sally').addEventListener('click', function() {
+  play_audio('sounds/libra.mp3');
+});
+
+document.getElementById('pigpen').addEventListener('click', function() {
+  play_audio('sounds/pisces.mp3');
+});
+
+document.getElementById('snoopy').addEventListener('click', function() {
+  play_audio('sounds/sagitarius.mp3');
+});
+
+document.getElementById('woodstock').addEventListener('click', function() {
+  play_audio('sounds/scorpio.mp3');
+});
+
+document.getElementById('frieda').addEventListener('click', function() {
+  play_audio('sounds/taurus.mp3');
+});
+
+document.getElementById('marcie').addEventListener('click', function() {
+  play_audio('sounds/virgo.mp3');
+});
+
+
 function getZodiac(month, day) {
     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
       return 'Capricorn/Linus Van Pelt';
