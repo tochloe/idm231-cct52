@@ -9,24 +9,57 @@
     <title>Zodiac by Schulz (and To)</title>
 </head>
 <body>
-    <h2>Zodiac by Schulz (and To)</h2>
+   <div class="title">
+
+
+    <h2>Zodiac by Schulz (and To)
+    <button class="help"><img src="./img/help.png" ></button> </h2>
+    
     <h3>WHAT PEANUTS' CHARACTER ARE YOU BASED ON YOUR ZODIAC?</h3>
+    <h3>PUT IN YOUR BIRTHDAY AND FIND OUT!</h3>
+<!--Date input/selector ... it will spit out your given zodiac-->    
+<input type="date" id="birthday" class="calendar">
+<button class="submit">Who am I?</button>
+
+</div>
     <div class="picgrid">
-        <div> <img src="./img/aquarius_franklin.png"> </div>
-        <div> <img src="./img/aries_lucy.png"> </div>
-        <div> <img src="./img/cancer_charlie.png"> </div>
-        <div> <img src="./img/capricorn_linus.png"> </div>
-        <div> <img src="./img/gemini_schroeder.png"> </div>
-        <div> <img src="./img/leo_peppermint.png"> </div>
-        <div> <img src="./img/libra_sally.png"> </div>
-        <div> <img src="./img/pisces_pigpen.png"> </div>
-        <div> <img src="./img/sagitarius_snoopy.png"> </div>
-        <div> <img src="./img/scorpio_woodstock.png"> </div>
-        <div> <img src="./img/taurus_frieda.png"> </div>
-        <div> <img src="./img/virgo_marcie.png"> </div>
+        <div> <img src="./img/aquarius_franklin.png" alt="Peanuts Franklin"> </div>
+        <div> <img src="./img/aries_lucy.png" alt="Peanuts Lucy Van Pelt"> </div>
+        <div> <img src="./img/cancer_charlie.png" alt="Peanuts Charlie Brown"> </div>
+        <div> <img src="./img/capricorn_linus.png" alt="Peanuts Linus Van Pelt"> </div>
+        <div> <img src="./img/gemini_schroeder.png" alt="Peanuts Schroeder"> </div>
+        <div> <img src="./img/leo_peppermint.png" alt="Peanuts Peppermint Patty"> </div>
+        <div> <img src="./img/libra_sally.png" alt="Peanuts Sally Brown"> </div>
+        <div> <img src="./img/pisces_pigpen.png" alt="Peanuts Pigpen"> </div>
+        <div> <img src="./img/sagittarius_snoopy.png" alt="Peanuts Snoopy"> </div>
+        <div> <img src="./img/scorpio_woodstock.png" alt="Peanuts Woodstock"> </div>
+        <div> <img src="./img/taurus_frieda.png" alt="Peanuts Frieda"> </div>
+        <div> <img src="./img/virgo_marcie.png" alt="Peanuts Marcie"> </div>
     </div>
 </body>
 </html>
 
 <audio id="soundboard"></audio>
 <script src="main.js"></script>
+
+
+<!--overlay-->
+<div class="zodiac-container">
+    <h2 id="zodiac-name"></h2>
+    <img id="zodiac-image" src="" alt="Zodiac image" />
+    <p id="zodiac-description"></p>
+</div>
+
+<!--help-->
+
+<div id="overlay" class="overlay">
+    <div class="popup">
+        <h2 id="zodiac-name"></h2>
+        <img id="zodiac-image" src="" alt="Zodiac image" />
+        <p id="zodiac-description"></p>
+        <button id="close-btn">Close</button>
+    </div>
+</div>
+
+<!-- Trigger Button to open the overlay -->
+<button onclick="openZodiacPopup(0)">Show Aries</button>

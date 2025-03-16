@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "Groundnut";
     src: url(./Groundnut-yxPm.ttf);
@@ -9,9 +13,6 @@
     font-weight: 300 400;
 }
 
-*{
-    box-sizing: border-box;
-}
 
 html {
     --cream: #FFFDCE;
@@ -25,9 +26,19 @@ body {
 }
 
 .picgrid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;    
+    margin: 20px;
+}
+
+.picgrid img{
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
 }
 
 
@@ -39,3 +50,74 @@ h2 {
 h3 {
     font-family: "Groundnut";
 }
+
+.submit {
+    font-family: "Averia Serif Libre";
+    border-radius: 20px;
+    background-color: var(--brown);
+    color: var(--cream);
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.submit:hover {
+    opacity: 50%;
+}
+
+.calendar {
+    font-family: "Averia Serif Libre";
+    background-color: var(--cream);
+    border: var(--brown);
+    color: var(--brown);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size:20px; 
+}
+
+.title {
+    margin-left: 300px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.help img{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+/*overlay*/
+
+.zodiac-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #473120;
+    border-radius: 20px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    background-color:var(--cream);
+}
+
+#zodiac-name {
+    text-transform: uppercase;
+    font-family: "Groundnut";
+    font-size: 32px;
+    color: var(--brown)
+}
+
+#zodiac-description {
+    font-family: 'Averia Serif Libre';
+    font-size: 24px;
+    color: var(--brown);
+}
+
+.zodiac-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
