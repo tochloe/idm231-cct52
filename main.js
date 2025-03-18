@@ -1,10 +1,4 @@
-/**
- * @description
- * Given a month and day, determine the corresponding Zodiac sign.
- * @param {number} month - month of the year (1-12)
- * @param {number} day - day of the month (1-31)
- * @returns {string} the corresponding Zodiac sign
- */
+
 const franklinBtn = document.getElementById('franklin')
 const lucyBtn = document.getElementById('lucy')
 const charlieBtn = document.getElementById('charlie')

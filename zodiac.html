@@ -13,7 +13,7 @@
 
 
     <h2>Zodiac by Schulz (and To)
-    <button class="help"><img src="./img/help.png" ></button> </h2>
+    <button class="help"><img src="./img/question.svg" ></button> </h2>
     
     <h3>WHAT PEANUTS' CHARACTER ARE YOU BASED ON YOUR ZODIAC?</h3>
     <h3>PUT IN YOUR BIRTHDAY AND FIND OUT!</h3>
@@ -22,19 +22,30 @@
 <button class="submit">Who am I?</button>
 
 </div>
+<div id="overlay" class="overlay">
+    <div class="popup">
+        <h2 id="zodiac-name"></h2>
+        <img id="zodiac-image" src="" alt="Zodiac image">
+        <p id="zodiac-description"></p>
+        <button id="close-btn"> <img src="./img/exit.svg" alt="Exit button"> </button>
+    </div>
+</div>
+
+
+<!--press img, sound will play-->
     <div class="picgrid">
-        <div> <img src="./img/aquarius_franklin.png" alt="Peanuts Franklin"> </div>
-        <div> <img src="./img/aries_lucy.png" alt="Peanuts Lucy Van Pelt"> </div>
-        <div> <img src="./img/cancer_charlie.png" alt="Peanuts Charlie Brown"> </div>
-        <div> <img src="./img/capricorn_linus.png" alt="Peanuts Linus Van Pelt"> </div>
-        <div> <img src="./img/gemini_schroeder.png" alt="Peanuts Schroeder"> </div>
-        <div> <img src="./img/leo_peppermint.png" alt="Peanuts Peppermint Patty"> </div>
-        <div> <img src="./img/libra_sally.png" alt="Peanuts Sally Brown"> </div>
-        <div> <img src="./img/pisces_pigpen.png" alt="Peanuts Pigpen"> </div>
-        <div> <img src="./img/sagittarius_snoopy.png" alt="Peanuts Snoopy"> </div>
-        <div> <img src="./img/scorpio_woodstock.png" alt="Peanuts Woodstock"> </div>
-        <div> <img src="./img/taurus_frieda.png" alt="Peanuts Frieda"> </div>
-        <div> <img src="./img/virgo_marcie.png" alt="Peanuts Marcie"> </div>
+        <div> <button class="open" id="franklin" onclick="openZodiacPopup(10)"> <img src="./img/aquarius_franklin.png" alt="Peanuts Franklin"> </button> </div>
+        <div> <button class="open" id="lucy" onclick="openZodiacPopup(0)"> <img src="./img/aries_lucy.png" alt="Peanuts Lucy Van Pelt"> </button> </div>
+        <div> <button class="open" id="charlie" onclick="openZodiacPopup(3)"> <img src="./img/cancer_charlie.png" alt="Peanuts Charlie Brown"> </button> </div>
+        <div> <button class="open" id="linus" onclick="openZodiacPopup(9)"> <img src="./img/capricorn_linus.png" alt="Peanuts Linus Van Pelt"> </button> </div>
+        <div> <button class="open" id="schroeder" onclick="openZodiacPopup(2)"> <img src="./img/gemini_schroeder.png" alt="Peanuts Schroeder"> </button> </div>
+        <div> <button class="open" id="peppermint" onclick="openZodiacPopup(4)"> <img src="./img/leo_peppermint.png" alt="Peanuts Peppermint Patty"> </button> </div>
+        <div> <button class="open" id="sally" onclick="openZodiacPopup(6)"> <img src="./img/libra_sally.png" alt="Peanuts Sally Brown"> </button> </div>
+        <div> <button class="open" id="pigpen" onclick="openZodiacPopup(11)"> <img src="./img/pisces_pigpen.png" alt="Peanuts Pigpen"> </button> </div>
+        <div> <button class="open" id="snoopy" onclick="openZodiacPopup(8)"> <img src="./img/sagittarius_snoopy.png" alt="Peanuts Snoopy"> </button> </div>
+        <div> <button class="open" id="woodstock" onclick="openZodiacPopup(7)"> <img src="./img/scorpio_woodstock.png" alt="Peanuts Woodstock"> </button> </div>
+        <div> <button class="open" id="frieda" onclick="openZodiacPopup(1)"> <img src="./img/taurus_frieda.png" alt="Peanuts Frieda"> </button> </div>
+        <div> <button class="open" id="marcie" onclick="openZodiacPopup(5)"> <img src="./img/virgo_marcie.png" alt="Peanuts Marcie"> </button> </div>
     </div>
 </body>
 </html>
@@ -43,23 +54,10 @@
 <script src="main.js"></script>
 
 
-<!--overlay-->
-<div class="zodiac-container">
-    <h2 id="zodiac-name"></h2>
-    <img id="zodiac-image" src="" alt="Zodiac image" />
-    <p id="zodiac-description"></p>
-</div>
 
-<!--help-->
 
-<div id="overlay" class="overlay">
-    <div class="popup">
-        <h2 id="zodiac-name"></h2>
-        <img id="zodiac-image" src="" alt="Zodiac image" />
-        <p id="zodiac-description"></p>
-        <button id="close-btn">Close</button>
-    </div>
-</div>
+
+
 
 <!-- Trigger Button to open the overlay -->
-<button onclick="openZodiacPopup(0)">Show Aries</button>
+<button >Show Aries</button>
