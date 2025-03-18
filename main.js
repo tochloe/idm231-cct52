@@ -1,4 +1,20 @@
+// FAQ sections
+const helpBtn = document.getElementById('faq'); 
+const faqOverlay = document.getElementById('faqoverlay'); 
+const closeBtn = document.getElementById('closeBtn'); 
 
+
+helpBtn.addEventListener('click', function() {
+    faqOverlay.style.display = 'flex'; // open
+});
+
+
+closeBtn.addEventListener('click', function() {
+    faqOverlay.style.display = 'none'; 
+}); //close
+
+
+// zodiac
 const franklinBtn = document.getElementById('franklin')
 const lucyBtn = document.getElementById('lucy')
 const charlieBtn = document.getElementById('charlie')
@@ -11,6 +27,9 @@ const snoopyBtn = document.getElementById('snoopy')
 const woodstockBtn = document.getElementById('woodstock')
 const friedaBtn = document.getElementById('frieda')
 const marcieBtn = document.getElementById('marcie')
+
+
+
 
 //sounds
 const soundboard = document.getElementById('soundboard');
@@ -195,3 +214,73 @@ function openZodiacPopup(index) {
 document.getElementById('close-btn').addEventListener('click', function() {
   document.getElementById('overlay').style.display = 'none'; // close
 });
+
+
+
+
+
+
+
+
+function getZodiac(month, day) {
+  if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+    return 0; // Capricorn/Linus Van Pelt
+  } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
+    return 9; // Sagittarius/Snoopy
+  } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
+    return 10; // Scorpio/Woodstock
+  } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
+    return 7; // Libra/Sally Brown
+  } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+    return 4; // Virgo/Marcie
+  } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+    return 5; // Leo/Peppermint Patty
+  } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
+    return 3; // Cancer/Charlie Brown
+  } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
+    return 1; // Taurus/Frieda
+  } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
+    return 8; // Pisces/Pigpen
+  } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
+    return 2; // Gemini/Schroeder
+  } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+    return 6; // Libra/Sally Brown
+  } else {
+    return -1; // Invalid date range
+  }
+}
+
+
+//submit
+const submitButton = document.getElementById('submitBtn');
+const overlay = document.getElementById('overlay');
+
+function displayZodiac(index) {
+  if (index === -1) return;
+
+  const zodiacDetails = zodiac[index];
+  document.getElementById('zodiac-name').textContent = zodiacDetails.name;
+  document.getElementById('zodiac-description').textContent = zodiacDetails.text;
+  document.getElementById('zodiac-image').src = zodiacDetails.img;
+}
+
+function openZodiacPopup(index) {
+  displayZodiac(index);
+  overlay.style.display = 'flex';
+}
+  submitButton.addEventListener('click', function() {
+    const birthdayInput = document.getElementById('birthday').valueAsDate;
+    if (!birthdayInput) {
+      alert('Enter your birthday!');
+      return;
+    }
+    const month = birthdayInput.getMonth() + 1; 
+    const day = birthdayInput.getDate();
+
+    const zodiacIndex = getZodiac(month, day); 
+    openZodiacPopup(zodiacIndex); 
+  });
+
+  closeBtn.addEventListener('click', function() {
+    overlay.style.display = 'none';
+  });

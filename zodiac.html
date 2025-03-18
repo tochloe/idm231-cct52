@@ -13,27 +13,48 @@
 
 
     <h2>Zodiac by Schulz (and To)
-    <button class="help"><img src="./img/question.svg" ></button> </h2>
+    <button class="help" id="faq"><img src="./img/question.svg" alt="help button"></button> </h2>
+
+    <div id="faqoverlay" class="overlayfaq">
+        <div class="faqpopup">
+            <h2>Having Trouble?</h2>
+            <p>1. Input your birthday on the given date picker, when you find your birthday, click "Who am I?"</p>
+            <p>2. Read about your character! Not satisfied? Click on the other characters to see what your friends match up with.</p>
+            <button id="closeBtn"> <img src="./img/exit.svg" alt="Exit button"> </button>
+        </div>
+    </div>
     
     <h3>WHAT PEANUTS' CHARACTER ARE YOU BASED ON YOUR ZODIAC?</h3>
     <h3>PUT IN YOUR BIRTHDAY AND FIND OUT!</h3>
 <!--Date input/selector ... it will spit out your given zodiac-->    
 <input type="date" id="birthday" class="calendar">
-<button class="submit">Who am I?</button>
-
-</div>
+<button class="submit" id="submitBtn">Who am I?</button>
 <div id="overlay" class="overlay">
     <div class="popup">
+      <h2 id="zodiac-name"></h2>
+      <img id="zodiac-image" alt="Zodiac image">
+      <p id="zodiac-description"></p>
+      <button id="close-btn"><img src="./img/exit.svg" alt="exit"> </button>
+    </div>
+  </div>
+
+</div>
+
+<!--pop up overlay-->
+<div id="overlay" class="overlay">
+    <div class="popup">
+        <button id="close-btn"> <img src="./img/exit.svg" alt="Exit button"> </button>
         <h2 id="zodiac-name"></h2>
         <img id="zodiac-image" src="" alt="Zodiac image">
         <p id="zodiac-description"></p>
-        <button id="close-btn"> <img src="./img/exit.svg" alt="Exit button"> </button>
+        
     </div>
 </div>
 
 
-<!--press img, sound will play-->
-    <div class="picgrid">
+<!--press img, sound will play and info will show up-->
+<div>
+<div class="picgrid">
         <div> <button class="open" id="franklin" onclick="openZodiacPopup(10)"> <img src="./img/aquarius_franklin.png" alt="Peanuts Franklin"> </button> </div>
         <div> <button class="open" id="lucy" onclick="openZodiacPopup(0)"> <img src="./img/aries_lucy.png" alt="Peanuts Lucy Van Pelt"> </button> </div>
         <div> <button class="open" id="charlie" onclick="openZodiacPopup(3)"> <img src="./img/cancer_charlie.png" alt="Peanuts Charlie Brown"> </button> </div>
@@ -47,17 +68,10 @@
         <div> <button class="open" id="frieda" onclick="openZodiacPopup(1)"> <img src="./img/taurus_frieda.png" alt="Peanuts Frieda"> </button> </div>
         <div> <button class="open" id="marcie" onclick="openZodiacPopup(5)"> <img src="./img/virgo_marcie.png" alt="Peanuts Marcie"> </button> </div>
     </div>
+    </div>
+</div>
 </body>
 </html>
 
 <audio id="soundboard"></audio>
 <script src="main.js"></script>
-
-
-
-
-
-
-
-<!-- Trigger Button to open the overlay -->
-<button >Show Aries</button>
