@@ -41,26 +41,6 @@ body {
     height: 480px; 
 }
 
-@media (max-width: 480px) {
-    .picgrid {
-        grid-template-columns: 1fr; 
-        grid-template-rows: repeat(12, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .picgrid {
-        grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: repeat(6, 1fr);   
-    }
-}
-
-@media (max-width: 1024px) {
-    .picgrid {
-        grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(4, 1fr);  
-    }
-}
 
 .picgrid img{
     max-width: 100%;
