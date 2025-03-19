@@ -123,73 +123,84 @@ function getZodiac(month, day) {
 
 
 const zodiac = [
-
+//1
     {
         name: 'Aries/Lucy Van Pelt',
         img: "./img/aries_lucy.png",
         text: 'Aries is bold, confident, and a natural leader, much like Lucy. She’s assertive, often taking charge (even if it’s bossy). Her competitive nature and fiery temper also align with Aries energy.'
     },
-    
+   
+//2
     {
         name: 'Taurus/Frieda',
         img: "./img/taurus_frieda.png",
         text: 'Taurus is grounded, appreciates beauty, and takes pride in their appearance. Frieda’s constant emphasis on her “naturally curly hair” and her preference for the finer, aesthetically pleasing things in life make her an excellent representation of Taurus. She embodies the sign’s love for physical comfort and self-assurance in her unique way.'
     },
 
+//3
     {
         name: 'Gemini/Schroeder',
         img: "./img/gemini_schroeder.png",
         text: 'Gemini is intellectual, curious, and communicative. Schroeder’s love for music and his ability to lose himself in conversations about Beethoven reflect the Gemini love for ideas and self-expression.'
     },
 
+//4
     {
         name: 'Cancer/Charlie Brown',
         img: "./img/cancer_charlie.png",
         text: 'Cancer is sensitive, nurturing, and often introspective, just like Charlie Brown. His tendency to care deeply for others and his emotional vulnerability resonate with Cancer’s empathetic nature.'
     },
 
+//5
     {
         name: 'Leo/Peppermint Patty',
         img: "./img/leo_peppermint.png",
         text: 'Leo is confident, charismatic, and full of life. Peppermint Patty’s outgoing personality, love for the spotlight, and strong sense of self make her a perfect Leo.'
     },
 
+//6
     {
         name: 'Virgo/Marcie',
         img:"./img/virgo_marcie.png",
         text: 'Virgo is analytical, thoughtful, and detail-oriented. Marcie’s studious nature and her tendency to be precise and organized mirror Virgo’s practical and intellectual qualities.'
     },
 
+ //7
     {
         name: 'Libra/Sally Brown',
         img: "./img/libra_sally.png",
         text: 'Libra values beauty, harmony, and relationships. Sally’s romantic side (especially her admiration for Linus) and her preference for things to be fair and pleasant reflect Libra’s ideals.'
     },
 
+ //8   
     {
         name:'Scorpio/Woodstock',
         img: "./img/scorpio_woodstock.png",
         text: 'Scorpio is loyal, resourceful, and enigmatic. Woodstock’s close bond with Snoopy and his mysterious ways (despite being small and underestimated) align with Scorpio’s depth and strength.'
     },
 
+//9
     {
         name: 'Sagittarius/Snoopy',
         img: "./img/sagittarius_snoopy.png",
         text: 'Sagittarius is adventurous, free-spirited, and always seeking new experiences. Snoopy’s imaginative flights of fancy—whether as the Flying Ace or a world traveler—perfectly reflect Sagittarius’ boundless optimism, love for adventure, and independent streak. His ability to dream big and live life on his terms is pure Sagittarius energy.'
     },
- 
+
+ //10
     {
         name: 'Capricorn/Linus Van Pelt',
         img: "./img/capricorn_linus.png",
         text: 'Capricorn is wise, responsible, and goal-oriented. Linus’s thoughtful nature, philosophical musings, and deep sense of tradition (like his devotion to the Great Pumpkin) reflect Capricorn’s grounded and mature qualities.'
     },
 
+//11
     {
         name:'Aquarius/Franklin',
         img: "./img/aquarius_franklin.png",
         text: 'Aquarius is progressive, intelligent, and values community. Franklin’s thoughtful approach to conversations, open-mindedness, and calm demeanor align with the humanitarian and innovative traits of Aquarius.'
     },
 
+//12
     {
         name: 'Pisces/Pigpen',
         img: "./img/pisces_pigpen.img",
@@ -216,35 +227,31 @@ document.getElementById('close-btn').addEventListener('click', function() {
 });
 
 
-
-
-
-
-
-
 function getZodiac(month, day) {
   if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-    return 10; // Capricorn/Linus Van Pelt
+    return 9; // Capricorn/Linus Van Pelt
   } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-    return 9; // Sagittarius/Snoopy
+    return 8; // Sagittarius/Snoopy
   } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
-    return 8; // Scorpio/Woodstock
+    return 7; // Scorpio/Woodstock
   } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
-    return 7; // Libra/Sally Brown
+    return 6; // Libra/Sally Brown
   } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-    return 6; // Virgo/Marcie
+    return 5; // Virgo/Marcie
   } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
-    return 5; // Leo/Peppermint Patty
+    return 4; // Leo/Peppermint Patty
   } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
-    return 4; // Cancer/Charlie Brown
+    return 3; // Cancer/Charlie Brown
   } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
-    return 3; // Gemini/Schroeder
+    return 2; // Gemini/Schroeder
   } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-    return 2; // Pisces/Pigpen
+    return 1; // Taurus/Frieda
   } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-    return 1; // Gemini/Schroeder
+    return 0; // Aries/Lucy Van Pelt
   } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
-    return 0; // Pisces/Pigpen
+    return 11; // Pisces/Pigpen
+  }  else if ((month === 1 && day >= 20) || (month === 2 && day <=18)) {
+    return 10; //Aquarius/Franklin
   } else {
     return -1; // Invalid date range
   }
