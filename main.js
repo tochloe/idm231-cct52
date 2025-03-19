@@ -238,7 +238,7 @@ function getZodiac(month, day) {
   } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
     return 4; // Cancer/Charlie Brown
   } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
-    return 3; // Taurus/Frieda
+    return 3; // Gemini/Schroeder
   } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
     return 2; // Pisces/Pigpen
   } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
