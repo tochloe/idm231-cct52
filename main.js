@@ -224,27 +224,27 @@ document.getElementById('close-btn').addEventListener('click', function() {
 
 function getZodiac(month, day) {
   if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-    return 0; // Capricorn/Linus Van Pelt
+    return 10; // Capricorn/Linus Van Pelt
   } else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
     return 9; // Sagittarius/Snoopy
   } else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
-    return 10; // Scorpio/Woodstock
+    return 8; // Scorpio/Woodstock
   } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
     return 7; // Libra/Sally Brown
   } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-    return 4; // Virgo/Marcie
+    return 6; // Virgo/Marcie
   } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
     return 5; // Leo/Peppermint Patty
   } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
-    return 3; // Cancer/Charlie Brown
+    return 4; // Cancer/Charlie Brown
   } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
-    return 1; // Taurus/Frieda
+    return 3; // Taurus/Frieda
   } else if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-    return 8; // Pisces/Pigpen
+    return 2; // Pisces/Pigpen
   } else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-    return 2; // Gemini/Schroeder
+    return 1; // Gemini/Schroeder
   } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
-    return 6; // Libra/Sally Brown
+    return 0; // Pisces/Pigpen
   } else {
     return -1; // Invalid date range
   }
